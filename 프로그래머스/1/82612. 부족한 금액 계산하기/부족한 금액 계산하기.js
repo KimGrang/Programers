@@ -3,11 +3,5 @@ function solution(price, money, count) {
     for(let i=1;i<=count;i++){
         answer += i*price
     }
-    if(answer > money){
-        answer = answer- money
-    }
-    else if(answer <= money){
-        answer = 0
-    }
-    return answer;
+    return (answer > money)? answer = answer- money:answer = 0;
 }
