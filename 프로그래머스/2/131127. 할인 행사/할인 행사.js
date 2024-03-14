@@ -1,11 +1,12 @@
 function solution(want, number, discount) {
     let answer = 0;
     let jh = new Map();
-    for(let i = 0; i<want.length;i++){
+    let len_want = want.length;
+    let len_dis = discount.length;
+    for(let i = 0; i<len_want;i++){
         jh.set(want[i],number[i])
     }
-    
-    for(let j = 0; j<discount.length;j++){
+    for(let j = 0; j<len_dis;j++){
         const jh2 = new Map(jh)
         for(let k = j; k<j+10;k++){
             const item = discount[k];
